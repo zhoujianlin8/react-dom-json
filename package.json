@@ -1,7 +1,7 @@
 {
     "name": "react-dom-json",
     "main": "lib/index.js",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "scripts": {
         "start": "detail start",
         "build": "detail build"
