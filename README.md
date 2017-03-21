@@ -1,9 +1,9 @@
 
-## react-json-dom 模块
+## react-dom-json 模块
 ```
-npm install react-json-dom --save
+npm install react-dom-json --save
 ```
-* react-json-dom  render  use json to the dom
+* react-dom-json  render  use json to the dom
 
 ## 使用
 
