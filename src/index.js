@@ -85,7 +85,8 @@ class Engine extends Component {
             const typeItem = this.components[type];
             let props = this.getItemProps(obj,typeItem);
             if(typeItem){
-                args.push(typeItem, this.extend({state: obj},this.extend(this.share,props)));
+                let share = this.extend({},this.share);
+                args.push(typeItem, this.extend({state: obj},this.extend(share,props)));
                 //nodeText
             }else if(type === 'text'){
                 return obj.value;
