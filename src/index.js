@@ -16,8 +16,10 @@ class Engine extends Component {
      }*/
     get propsState (){
         return this.props.state || {}
-    };
-    listens = this.props.listens || {};
+    }
+    get listens (){
+        return this.props.listens || {};
+    }
     fire(type,...props){
         const types = this.listens[type];
         if(types){
@@ -56,7 +58,7 @@ class Engine extends Component {
         if(this.props.getItemProps) return this.props.getItemProps(obj,isCom);
         let props = {};
         const share  = this.share || {};
-        for(var key in obj){
+        for(const key in obj){
             if(key && key !== 'type' && key !== 'children'){
                 const type = obj[key];
                 if(type && /^on[A-Z]/g.test(key)){
@@ -89,7 +91,7 @@ class Engine extends Component {
                 args.push(typeItem, this.extend({state: obj},this.extend(share,props)));
                 //nodeText
             }else if(type === 'text'){
-                return obj.value;
+                return obj.children;
             }else if(/^[a-z]+$/g) {
                 args.push(type, props);
             }else{

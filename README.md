@@ -22,7 +22,7 @@ let init = {
                 src: 'sss',
                 children: [{
                     type: 'text',
-                    value: 'goBack'
+                    children: 'goBack'
                 }]
             }, {
                 type: 'Group',
@@ -44,17 +44,14 @@ let init = {
                 id: 'hello',
                 children: [{
                     type: 'text',
-                    value: 'hello'
+                    children: 'hello'
                 }]
             }, {
                 type: 'img',
                 src: 'sss',
             }, {
                 type: 'div',
-                children: [{
-                    type: 'text',
-                    value: 'assaassa'
-                }],
+                children: 'assaassa',
                 onClick: 'up'
             }
         ]
